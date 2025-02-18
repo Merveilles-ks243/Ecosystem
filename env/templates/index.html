@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merveilles Word - Simulateur</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header avec logo et nom du site -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1>Merveilles Word</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{ url_for('templates', filename='login.html') }">Connexion</a></li>
+                <li><a href="/creer-compte">Créer un compte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Corps de la page avec vidéo et informations -->
+    <main>
+        <section class="intro">
+            <h2>Bienvenue dans notre simulateur d'écosystème !</h2>
+            <p>Comme un dieu, vous pourrez influencer le destin des animaux dans cet écosystème. Décidez si la pluie tombe, si des événements surviennent et plus encore.</p>
+            <video controls>
+                <source src="simulation-video.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la balise vidéo.
+            </video>
+        </section>
+
+        <section class="objectif">
+            <h2>Objectif</h2>
+            <p>Les utilisateurs accumulent des points en influençant l'environnement. Plus vous avez de points, plus vous pouvez provoquer des événements majeurs dans la simulation, comme des sécheresses ou des tempêtes.</p>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 Nom du Site. Tous droits réservés.</p>
+        <ul>
+            <li><a href="/conditions">Conditions d'utilisation</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
