@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Nom du Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1>Nom du Site</h1>
+        </div>
+    </header>
+
+    <!-- Formulaire de connexion -->
+    <main>
+        <section class="login">
+            <h2>Connexion</h2>
+            <form action="/connexion" method="POST">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Se connecter</button>
+            </form>
+            <p>Pas encore de compte ? <a href="/creer-compte">Créer un compte</a></p>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 Nom du Site. Tous droits réservés.</p>
+        <ul>
+            <li><a href="/conditions">Conditions d'utilisation</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
